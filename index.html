@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi proyecto Git</title>
+    <meta name="description" content="Premium Truck ofrece soluciones de transporte de carga de alta calidad, confiables y eficientes para tu negocio.">
+    <link rel="icon" href="../Página Web/icon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .texto-bienvenida {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        body.modo-oscuro .texto-bienvenida {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body id="bodyPrincipal">
+    <header id="headerPrincipal" class="header">
+        <nav id="navPrincipal" class="navbar navbar-expand-lg main-nav py-3">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                    <img src="./img/logo.png" alt="logotipo empresarial" title="Empresa lider en transporte de carga en Colombia" class="logo" height="45">
+                    <span class="fw-bold d-none d-md-inline">Premium Truck</span>
+                </a>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-lg-3 p-3 p-lg-0 mt-3 mt-lg-0 rounded align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3" aria-current="page" href="index.html" title="Ir a la página de inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="./pages/servicios.html" title="Explorar nuestros servicios y catálogo">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="./pages/contacto.html" title="Contáctanos para más información">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button id="btnModoOscuro" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                                🌙
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenido-main container py-5">
+        <section class="hero-section row align-items-center mb-5">
+            <div class="col-12 col-lg-10 mx-auto text-center">
+                <h1 class="titulo-sitio display-4 fw-bold mb-4">Premium Truck</h1>
+                <p class="texto-bienvenida lead">En <strong>Premium Truck</strong>, nos dedicamos a ofrecer soluciones de transporte de carga que superan las expectativas de nuestros clientes. Con una flota moderna y un equipo experimentado, garantizamos la entrega segura y puntual de tus mercancías.</p>
+                <p class="texto-bienvenida">Nuestro compromiso es la eficiencia y la confiabilidad, asegurando que cada viaje sea un testimonio de nuestro servicio premium. <em>Confía en los expertos para tus necesidades logísticas.</em></p>
+                <p class="mt-3">Hoy es: <span id="fechaActual" class="fw-bold"></span></p>
+                <div class="mt-3">
+                    <button id="btnBienvenida" class="btn btn-primary me-2">Ver mensaje de bienvenida</button>
+              </div>
+                <div id="mensajeBienvenida" class="alert alert-info mt-3" style="display: none;">
+                    <h4>¡Bienvenido a Premium Truck!</h4>
+                    <p class="mb-0">Más de 10 años moviendo Colombia con seguridad y puntualidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-galeria mb-5">
+            <h2 class="titulo-seccion text-center mb-4">Nuestra Flota Premium</h2>
+            <div class="image-gallery row g-3">
+                <div class="col-12">
+                    <img src="./img/truck1.jpg" alt="Camión moderno de carga en carretera" title="Camión de larga distancia" class="gallery-image large-image img-fluid rounded shadow-sm w-100">
+                </div>
+                <div class="col-12">
+                    <img src="./img/truck2.jpg" alt="Interior de cabina de camión de lujo" title="Interior confortable" class="gallery-image medium-image img-fluid rounded shadow-sm w-100">
+                </div>
+                <div class="col-12">
+                    <img src="./img/truck3.jpg" alt="Camión de carga pesado al atardecer" title="Potencia y durabilidad" class="gallery-image small-image img-fluid rounded shadow-sm w-100">
+                </div>
+            </div>
+            <p class="gallery-caption text-center mt-3"><small class="text-muted">Descubre la potencia y comodidad de nuestros vehículos.</small></p>
+        </section>
+
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <aside class="aside-info card p-4 mb-4 shadow-sm">
+                    <h3 class="titulo-aside h4 mb-3">¿Por qué elegir Premium Truck?</h3>
+                    <ul class="porque-elegirnos list-group list-group-flush">
+                        <li class="list-group-item"><mark>Experiencia:</mark> Años en la industria del transporte.</li>
+                        <li class="list-group-item"><mark>Tecnología:</mark> Flota equipada con lo último en GPS y seguridad.</li>
+                        <li class="list-group-item"><mark>Soporte:</mark> Atención al cliente 24/7.</li>
+                        <li class="list-group-item"><mark>Confianza:</mark> Más de <u>mil</u> entregas exitosas.</li>
+                    </ul>
+                    <p class="fst-italic mt-3 mb-0">¡Tu carga, nuestra prioridad!</p>
+                    <div class="mt-3">
+                        <button id="btnContador" class="btn btn-success btn-sm">Haz click</button>
+                        <span id="contadorClicks" class="ms-2 fw-bold">Clicks: 0</span>
+                    </div>
+                </aside>
+            </div>
+            
+            <div class="col-12 d-flex justify-content-center mb-4">
+                <a href="./pages/contacto.html" title="¡Comunicate ya!" class="btn btn-primary text-white shadow">¡Contáctanos ahora mismo!</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer container-fluid bg-secondary text-white py-5 mt-5">
+        <div class="text-center">
+            <p class="mb-2">&copy; <span id="anioFooter">2026</span> Premium Truck. Todos los derechos reservados.</p>
+            <address id="direccionFooter">Medellín, Antioquia, Colombia</address>
+            <p class="mb-0">
+                <a href="index.html" class="text-white text-decoration-none me-2" title="Volver a Inicio">Inicio</a> |
+                <a href="./pages/servicios.html" class="text-white text-decoration-none mx-2" title="Ver nuestros Servicios">Servicios</a> |
+                <a href="./pages/contacto.html" class="text-white text-decoration-none ms-2" title="Contacta con nosotros">Contacto</a>
+            </p>
+        </div>
+    </footer>
+
+    <button id="btnVolverArriba" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display: none;">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/general.js"></script>
+</body>
+</html>
